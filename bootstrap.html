@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        .accordion {
+            width: 22vw;
+            height: 7vw !important;
+            /* padding: 3px !important; */
+        }
+
+        .accordion-body {
+            font-size: small !important;
+            padding: 2px !important;
+        }
+
+        .carousel-inner,
+        .photo {
+            height: 90vh !important;
+
+        }
+
+        .fcard {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cardm {
+            height: 18rem;
+            padding: 0px;
+            scale: 80%;
+            margin-bottom: 0px !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <!-- bootstrap nav-bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">BookWorm</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reader's Digest</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#new">New Arrivals</a></li>
+                                <li><a class="dropdown-item" href="#best">Best Sellers</a></li>
+                                <li><a class="dropdown-item" href="#Fiction">Fiction</a></li>
+                                <li><a class="dropdown-item" href="#horror">Horror</a></li>
+                                <li><a class="dropdown-item" href="#">Love story</a></li>
+                                
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">more..</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navbar end  -->
+
+        <!-- carousal start -->
+
+        <div id="carouselExampleIndicators" class="carousel slide slider" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/images/book-gen.png" class="d-block w-100 photo" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/book5.jpg" class="d-block w-100 photo" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/book2.jpg" class="d-block w-100 photo" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+        <!-- carousal ends -->
+
+
+
+        <!-- grid start  -->
+
+        <div class="grid container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6 class="text-centre my-4">Most Popular</h6>
+                </div>
+                <div class="col-md-8">
+                    <h3 class="text-center my-3" id="new"> New Arrivals</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid container-fluid">
+
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <!-- side-bar  -->
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    You can Win
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>-By Shiv Khera</strong>
+                                    <p> Best seller in the category of Personality Development , tons of moral stories
+                                        that you can
+                                        relate to & understand and work on your flaws.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    3 mistakes of my Life
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>-By Chetan Bhagat</strong> Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit.
+                                    Aperiam ipsam
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    The Nature of Nature
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>-By Enric Sala</strong> Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit.
+                                    Aperiam ipsam quas veritatis
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    The Beauty in breaking
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>-By Michelle Harper</strong> Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit.
+                                    Aperiam ipsam quas veritatis maxime tempora.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Atomic habits
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>- By James </strong> Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Ipsam
+                                    officiis tempore laudantium
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Who Moved my Cheese?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>- By Spencer Johnson </strong> Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Ipsam
+                                    officiis tempore laudantium
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    The Secret
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>- By Rhonda Byrne </strong> Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Ipsam
+                                    officiis
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    The 5 AM Club
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>- By Robin Sharma </strong> Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Ipsam
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingNine">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    Think and Grow Rich
+                                </button>
+                            </h2>
+                            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>- By Napolean Hill </strong> Lorem ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Ipsam
+                                    officiis tempore laudantium architecto
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- side-bar ends -->
+
+                <div class="col-md-3">
+                    <div class="card fcard" style="width: 15rem;">
+                        <img src="/images/card1.jpg" class="card-img-top cardm" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Lord of the Rings</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Order now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card fcard" style="width: 15rem;">
+                        <img src="/images/card2.jpg" class="card-img-top cardm" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Last thing he told me</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Order now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card fcard" style="width: 15rem;">
+                        <img src="/images/card3.jpg" class="card-img-top cardm" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Child of Revolution</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Order now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second row start  -->
+            <h3 class="text-center my-3" id="best">Best Seller</h3>
+            <div class="grid container-fluid">
+                <div class="row gridd">
+                    <div class="col-md-3 cardd">
+                        <div class="card" style="width: 15rem;">
+                            <img src="/images/row2.jpg" class="card-img-top cardm" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">The Secret Messenger</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ea
+                                    voluptatibus deleniti.
+                                </p>
+                                <a href="#" class="btn btn-primary">Order now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 cardd">
+                        <div class="card" style="width: 15rem;">
+                            <img src="/images/row3.jpg" class="card-img-top cardm" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">It ends with Us</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
+                                    voluptates nesciunt Lorem ipsum dolor sit. </p>
+                                <a href="#" class="btn btn-primary">Order now</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 cardd">
+                        <div class="card" style="width: 15rem;">
+                            <img src="/images/row4.jpg" class="card-img-top cardm" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Bitter Sweet</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Exercitationem itaque sit suscipit</p>
+                                <a href="#" class="btn btn-primary">Order now</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 cardd">
+                        <div class="card" style="width: 15rem;">
+                            <img src="/images/row5.jpg" class="card-img-top cardm" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">The Namesake</h5>
+                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                                    deleniti ratione minus suscipit</p>
+                                <a href="#" class="btn btn-primary">Order now</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- second row end  -->
+
+            <!-- Third row start  -->
+            <h3 class="text-center my-3" id="Fiction">Fiction</h3>
+            <div class="grid container-fluid">
+                <div class="row gridd">
+                    <div class="col-md-3 cardd">
+                        <div class="card" style="width: 15rem;">
+                            <img src="/images/img1.jpg" class="card-img-top cardm" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Solar Bones</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ea
+                                    voluptatibus deleniti.
+                                </p>
+                                <a href="#" class="btn btn-primary">Order now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 cardd">
+                        <div class="card" style="width: 15rem;">
+                            <img src="/images/img2.jpg" class="card-img-top cardm" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">The Rose Code</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
+                                    voluptates nesciunt Lorem ipsum dolor sit. </p>
+                                <a href="#" class="btn btn-primary">Order now</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 cardd">
+                        <div class="card" style="width: 15rem;">
+                            <img src="/images/img3.jpg" class="card-img-top cardm" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">What comes After</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Exercitationem itaque sit suscipit</p>
+                                <a href="#" class="btn btn-primary">Order now</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 cardd">
+                        <div class="card" style="width: 15rem;">
+                            <img src="/images/img4.jpg" class="card-img-top cardm" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">To kill a MockingBird</h5>
+                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                                    deleniti ratione minus suscipit</p>
+                                <a href="#" class="btn btn-primary">Order now</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Third row end  -->
+
+             <!-- Four row start  -->
+             <h3 class="text-center my-3" id="horror">Horror</h3>
+             <div class="grid container-fluid">
+                 <div class="row gridd">
+                     <div class="col-md-3 cardd">
+                         <div class="card" style="width: 15rem;">
+                             <img src="/images/himg1.jpg" class="card-img-top cardm" alt="...">
+                             <div class="card-body">
+                                 <h5 class="card-title">IT</h5>
+                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ea
+                                     voluptatibus deleniti.
+                                 </p>
+                                 <a href="#" class="btn btn-primary">Order now</a>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-md-3 cardd">
+                         <div class="card" style="width: 15rem;">
+                             <img src="/images/himg2.jpg" class="card-img-top cardm" alt="...">
+                             <div class="card-body">
+                                 <h5 class="card-title">Bird Box</h5>
+                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
+                                     voluptates nesciunt Lorem ipsum dolor sit. </p>
+                                 <a href="#" class="btn btn-primary">Order now</a>
+                             </div>
+                         </div>
+ 
+                     </div>
+                     <div class="col-md-3 cardd">
+                         <div class="card" style="width: 15rem;">
+                             <img src="/images/himg3.jpg" class="card-img-top cardm" alt="...">
+                             <div class="card-body">
+                                 <h5 class="card-title">I am Behind You</h5>
+                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                     Exercitationem itaque sit suscipit</p>
+                                 <a href="#" class="btn btn-primary">Order now</a>
+                             </div>
+                         </div>
+ 
+                     </div>
+                     <div class="col-md-3 cardd">
+                         <div class="card" style="width: 15rem;">
+                             <img src="/images/himg4.jpg" class="card-img-top cardm" alt="...">
+                             <div class="card-body">
+                                 <h5 class="card-title">The Amityville Horror</h5>
+                                 <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                                     deleniti ratione minus suscipit</p>
+                                 <a href="#" class="btn btn-primary">Order now</a>
+                             </div>
+                         </div>
+ 
+                     </div>
+ 
+                 </div>
+ 
+             </div>
+ 
+             <!-- Four row end  -->
+
+        </div>
+        <!-- grid end  -->
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
